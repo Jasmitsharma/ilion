@@ -18,6 +18,7 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,600" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 <link rel="shortcut icon" type="ilon/ico" href="ilon.ico"/>
 <script src="js/modernizr.js" type="text/javascript"></script>
 </head>
@@ -91,22 +92,29 @@
           <img src="dalle.png">
           <h2 class="header">Dalle</h2>
         </div>
-      <div class="portfoliosection">
-        <i class="fa-solid fa-chevron-left"></i>
-        <div class="portfoliogallery">
-            <div>
-              <span><img src="gallery4.jpg"></span>
-              <span><img src="gallery5.jpg"></span>
-              <span><img src="gallery6.jpg"></span>
-            </div>
-            <div>
-              <span><img src="gallery4.jpg"></span>
-              <span><img src="gallery5.jpg"></span>
-              <span><img src="gallery6.jpg"></span>
+        <div class="portfoliosectionslider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="gallery4.jpg"></div>
+                    <div class="swiper-slide"><img src="gallery5.jpg"></div>
+                    <div class="swiper-slide"><img src="gallery6.jpg"></div>
+                    <div class="swiper-slide"><img src="gallery7.jpg"></div>
+                    <div class="swiper-slide"><img src="gallery1.jpg"></div>
+                    <div class="swiper-slide"><img src="gallery2.jpg"></div>
+                    <div class="swiper-slide"><img src="gallery3.jpg"></div>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+ 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
             </div>
         </div>
-          <i class="fa-solid fa-chevron-right"></i>
-      </div>
+
     </section>
   </div>
  
@@ -140,5 +148,31 @@
 <script src="js/jquery.fancybox.pack.js" type="text/javascript"></script> 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI9Xh0ihB2u4E0-vnpXgtyjaDCHxrfgik&sensor=false" type="text/javascript"></script> 
 <script src="js/googlemaps.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 3,
+    speed: 1000, 
+    spaceBetween: 20,
+    slidesPerGroup: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+     navigation: {
+      nextEl: '.bi-arrow-right-circle-fill',
+      prevEl: '.bi-arrow-left-circle-fill',
+    },
+  });
+</script>
 </body>
 </html>
